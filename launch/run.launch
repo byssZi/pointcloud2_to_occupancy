@@ -1,0 +1,11 @@
+<launch>
+
+  <node pkg="pointcloud2_to_occupancy" type="occupancy_grid_generator_node" name="occ" output="screen">
+    <!-- Input Topic Names -->
+    <param name="radar_points_topic"                  value="obstacle_detector/radar_pointcloud"/>
+    <param name="lidar_points_topic"                  value="obstacle_detector/cloud_clusters"/>
+    <!-- Output Topic Names -->
+    <param name="occupancy_topic"                     value="obstacle_detector/occupancy"/>
+  </node>
+
+</launch>
